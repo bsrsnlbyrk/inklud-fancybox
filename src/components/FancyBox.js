@@ -8,12 +8,12 @@ const FancyBox = ({
   hasBlackShadowOnHover = false,
 }) => {
   const colorVariants = {
-    pink: "primary-pink",
-    seaGreen: "primary-sea-green",
-    lightBlue: "primary-light-blue",
-    green: "primary-green",
-    magenta: "primary-magenta",
-    black: "primary-black",
+    pink: "bg-primary-pink",
+    seaGreen: "bg-primary-sea-green",
+    lightBlue: "bg-primary-light-blue",
+    green: "bg-primary-green",
+    magenta: "bg-primary-magenta",
+    black: "bg-primary-black",
   };
 
   const borderClassOnHover = hasBlackShadowOnHover
@@ -26,7 +26,7 @@ const FancyBox = ({
         {content}
       </div>
       <div
-        class={`absolute ${left} ${top} z-0 h-full w-full rounded border border-black ${borderClassOnHover} bg-${colorVariants[shadowColor]}`}
+        class={`absolute ${left} ${top} z-0 h-full w-full rounded border border-black ${borderClassOnHover} ${colorVariants[shadowColor]}`}
       ></div>
     </div>
   );
